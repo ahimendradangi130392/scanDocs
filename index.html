@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Scanner</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="main-section">
+      <div class="data-scanning">
+        <h3 class="headeing">Document Scanner</h3>
+        <div class="input-flie">
+          <div class="file">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                id="upload"
+              >
+                <path
+                  d="M8.71,7.71,11,5.41V15a1,1,0,0,0,2,0V5.41l2.29,2.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42l-4-4a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21l-4,4A1,1,0,1,0,8.71,7.71ZM21,12a1,1,0,0,0-1,1v6a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V13a1,1,0,0,0-2,0v6a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V13A1,1,0,0,0,21,12Z"
+                ></path>
+              </svg>
+              Select file</span
+            >
+            <input type="file" accept=".pdf, .doc, .docx" id="fileInput" />
+          </div>
+          <button onclick="uploadDocument()">Upload file</button>
+
+          <span class="selected-file-name" id="selectedFileName"></span>
+          <span class="selected-file-name error" id="errorText"> </span>
+        </div>
+        <div class="search-data">
+          <div class="search-feild">
+            <input
+              type="search"
+              id="searchInput"
+              name="gsearch"
+              placeholder="Search by keywords"
+            />
+            <button class="searchbtn" onclick="searchKeywords()">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 30 30"
+                width="20px"
+                height="20px"
+              >
+                <path
+                  d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="text-data">
+            <p id="results"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.9.359/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+
+    <script src="./custom.js"></script>
+  </body>
+</html>
